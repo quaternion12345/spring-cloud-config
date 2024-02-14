@@ -39,4 +39,7 @@ management:
         include: refresh, health, beans, busrefresh, info, metrics, prometheus
 
 gateway:
-  ip: 127.0.0.1  
+  ip: 127.0.0.1
+
+kafka:
+  ip: 172.18.0.100:9092
