@@ -1,6 +1,42 @@
-token:
-  expiration_time: 86400000 # 24 * 60 * 60 * 1000
-  secret: user_token_native_application_changed_#2
+server:
+  port: 0
+
+spring:
+  rabbitmq:
+    host: 127.0.0.1 # rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2-console
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka # http://discovery-service:8761/eureka/
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+    propagation:
+      consume: B3
+      produce: B3_MULTI
+    zipkin:
+      tracing:
+        endpoint: "http://localhost:9411/api/v2/spans" # http://zipkin:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, busrefresh, info, metrics, prometheus
 
 gateway:
-  ip: 127.0.0.1
+  ip: 127.0.0.1  

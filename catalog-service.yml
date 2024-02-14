@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: catalog-service
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: catalog_user
+    password: '{cipher}AQAzSZSHJp5dL2FwjzswW1A2yOr0aUKmMWpckT0P5MAXAfvQE79h9iOZjgr6/UjLIK1IqJWaBctU8C7F+mCNcApTVu+A/w8oylsJu0SoKKWdcKpcgfGW7gIDdG6s1ZUiPTiP7YvIMfQoO0VjN8AFKXNhYUJroIg25Ck62mddFiO50bOUjEQtV+iwz1DhpjRhoY2ke8JJEkGTnLbcBbNIdKtaKcGJMAZeUhdE+0TcsOaE/tusbHxHlJD2qBgXCbDWR4iPhVgU7W6V9Ro55nI+AsPB82S0AQuEJTUZdNAB0TQDkjgIiXS4y4G+GIqtvmOarwRtyzbPh3Vo+tUzomKNMXCRHHK6GVGH83ExiM3P5bynO3N92suPxAbGIgdCmTvjVUhzAEF483a4riGszeTfDVDc'
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    generate-ddl: true
+
+logging:
+  level:
+    com.example.catalogservice: DEBUG
