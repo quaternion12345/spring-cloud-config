@@ -11,6 +11,9 @@ spring:
       ddl-auto: update
     show-sql: true
     generate-ddl: true
+  sql:
+    init:
+      mode: never
 
 logging:
   level:
