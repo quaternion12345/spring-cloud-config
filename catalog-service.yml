@@ -2,10 +2,10 @@ spring:
   application:
     name: catalog-service
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb
-    username: catalog_user
-    password: '{cipher}AQAzSZSHJp5dL2FwjzswW1A2yOr0aUKmMWpckT0P5MAXAfvQE79h9iOZjgr6/UjLIK1IqJWaBctU8C7F+mCNcApTVu+A/w8oylsJu0SoKKWdcKpcgfGW7gIDdG6s1ZUiPTiP7YvIMfQoO0VjN8AFKXNhYUJroIg25Ck62mddFiO50bOUjEQtV+iwz1DhpjRhoY2ke8JJEkGTnLbcBbNIdKtaKcGJMAZeUhdE+0TcsOaE/tusbHxHlJD2qBgXCbDWR4iPhVgU7W6V9Ro55nI+AsPB82S0AQuEJTUZdNAB0TQDkjgIiXS4y4G+GIqtvmOarwRtyzbPh3Vo+tUzomKNMXCRHHK6GVGH83ExiM3P5bynO3N92suPxAbGIgdCmTvjVUhzAEF483a4riGszeTfDVDc'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-command-catalogs:3306/mydbserverTimezone=Asia/Seoul&useSSL=false?
+    username: root
+    password: '{cipher}AQC4QUY/2bkXHtXWw1CCWjFwVmtqf9LR0IN5n/tZj4gwCtXtISyyMTysiqxASgWZjiYkfpzs8gM1SZzhw4kuPp02NaG68JRlSy7Zj3TIRti3ZQj5cnwwWMhl6vIZMyRHAs0/HoXe7E+qonJn9NOcYU60M+xBPBYU++fIL6klue+hzPBorxmkmQFXrPAXcPQ0hJatKdoKuXPjguKImGiHk3cXxrlShazGs7MjcdLQmpz2xQwGc2HpTWyyNa5zEgc5Sh2biAN5LeQMsXgImFnK1q/nRuDhpYR95ct58MUjAaYVU4W9rUg+m5kCA3B24438S63M+270o2Lw/L+NphivshPBcsz9m9JpXyl+VYzVhnEdgYC4CeCo/Ni7AdVLXnVYUIU='
   jpa:
     hibernate:
       ddl-auto: update

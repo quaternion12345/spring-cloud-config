@@ -7,12 +7,12 @@ spring:
     port: 5672
     username: guest
     password: guest
-  h2:
-    console:
-      enabled: true
-      settings:
-        web-allow-others: true
-      path: /h2-console
+  # h2:
+  #   console:
+  #     enabled: true
+  #     settings:
+  #       web-allow-others: true
+  #     path: /h2-console
 
 eureka:
   instance:
@@ -42,4 +42,8 @@ gateway:
   ip: 127.0.0.1
 
 kafka:
-  ip: 172.18.0.100:9092
+  url: 172.18.0.100:9092 # kafka:9092
+
+schema:
+  registry:
+    url: http://172.18.0.101:8081 # schema-registry:8081
