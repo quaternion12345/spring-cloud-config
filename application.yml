@@ -3,7 +3,7 @@ server:
 
 spring:
   rabbitmq:
-    host: 127.0.0.1 # rabbitmq
+    host: rabbitmq
     port: 5672
     username: guest
     password: guest
@@ -21,7 +21,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka # http://discovery-service:8761/eureka/
+      defaultZone: http://discovery-service:8761/eureka/
 
 management:
   tracing:
@@ -32,18 +32,18 @@ management:
       produce: B3_MULTI
     zipkin:
       tracing:
-        endpoint: "http://localhost:9411/api/v2/spans" # http://zipkin:9411/api/v2/spans
+        endpoint: http://zipkin:9411/api/v2/spans
   endpoints:
     web:
       exposure:
         include: refresh, health, beans, busrefresh, info, metrics, prometheus
 
 gateway:
-  ip: 127.0.0.1
+  ip: apigateway-service
 
 kafka:
-  url: 172.18.0.100:9092 # kafka:9092
+  url: kafka:9092
 
 schema:
   registry:
-    url: http://172.18.0.101:8081 # schema-registry:8081
+    url: schema-registry:8081
