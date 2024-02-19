@@ -11,7 +11,7 @@ spring:
     mongodb:
       host: localhost # query-catalogs-1
       port: 27317 # 27017
-      # authentication-database: admin
+      authentication-database: admin
       username: catalog_user
       password: '{cipher}AQCXJv/nz7eB68aMipqi2zt8uFdzSUFNIo2dUuVAeTo2kegknO2RGX1EWDsq2xekjwuDOfkgjvJedt/wfqs5Q7XAsy6BirjTbgdsXobuUqEupqbsLegzoPMdcI+QHY9DJMyrRB0z6Fi70kVAnMJIumLM9Gn6tyWPkAx620FRJDMWPUmO4bLwh+uKeXh9bs8PUPLw9HsGXEPYbydu80IpStBWt50OXhOwE+LMFhUTToUbPhJZ0XlVqf0TOcaFqlBU88H/+IoLrINluAEHMQfCLSeyvR2XKxJxHuVYUyxEKHjx5V7cov10X/icPcPC+P8+GEYr6OqzPNl/LR4qKQjFV+mz4pr/qxoCK31gsSnbPLyEiEeJtNteNJtAv1iTCtPvmWLoxs9o8+7saoGeHSRDLbeQ'
       database: mydb
