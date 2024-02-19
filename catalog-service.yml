@@ -3,12 +3,14 @@ spring:
     name: catalog-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-command-catalogs:3306/mydbserverTimezone=Asia/Seoul&useSSL=false?
+    url: jdbc:mysql://localhost:3336/mydbserverTimezone=Asia/Seoul&useSSL=false?
+    # url: jdbc:mysql://mysql-command-catalogs:3306/mydbserverTimezone=Asia/Seoul&useSSL=false?
     username: root
     password: '{cipher}AQC4QUY/2bkXHtXWw1CCWjFwVmtqf9LR0IN5n/tZj4gwCtXtISyyMTysiqxASgWZjiYkfpzs8gM1SZzhw4kuPp02NaG68JRlSy7Zj3TIRti3ZQj5cnwwWMhl6vIZMyRHAs0/HoXe7E+qonJn9NOcYU60M+xBPBYU++fIL6klue+hzPBorxmkmQFXrPAXcPQ0hJatKdoKuXPjguKImGiHk3cXxrlShazGs7MjcdLQmpz2xQwGc2HpTWyyNa5zEgc5Sh2biAN5LeQMsXgImFnK1q/nRuDhpYR95ct58MUjAaYVU4W9rUg+m5kCA3B24438S63M+270o2Lw/L+NphivshPBcsz9m9JpXyl+VYzVhnEdgYC4CeCo/Ni7AdVLXnVYUIU='
   data:
     mongodb:
-      uri: 'mongodb://query-catalogs-1:27017'
+      uri: 'mongodb://localhost:27317'
+      # uri: 'mongodb://query-catalogs-1:27017'
       database: mydb
       username: catalog_user
       password: '{cipher}AQCXJv/nz7eB68aMipqi2zt8uFdzSUFNIo2dUuVAeTo2kegknO2RGX1EWDsq2xekjwuDOfkgjvJedt/wfqs5Q7XAsy6BirjTbgdsXobuUqEupqbsLegzoPMdcI+QHY9DJMyrRB0z6Fi70kVAnMJIumLM9Gn6tyWPkAx620FRJDMWPUmO4bLwh+uKeXh9bs8PUPLw9HsGXEPYbydu80IpStBWt50OXhOwE+LMFhUTToUbPhJZ0XlVqf0TOcaFqlBU88H/+IoLrINluAEHMQfCLSeyvR2XKxJxHuVYUyxEKHjx5V7cov10X/icPcPC+P8+GEYr6OqzPNl/LR4qKQjFV+mz4pr/qxoCK31gsSnbPLyEiEeJtNteNJtAv1iTCtPvmWLoxs9o8+7saoGeHSRDLbeQ'
