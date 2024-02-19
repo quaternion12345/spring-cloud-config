@@ -8,9 +8,9 @@ spring:
     password: '{cipher}AQC4QUY/2bkXHtXWw1CCWjFwVmtqf9LR0IN5n/tZj4gwCtXtISyyMTysiqxASgWZjiYkfpzs8gM1SZzhw4kuPp02NaG68JRlSy7Zj3TIRti3ZQj5cnwwWMhl6vIZMyRHAs0/HoXe7E+qonJn9NOcYU60M+xBPBYU++fIL6klue+hzPBorxmkmQFXrPAXcPQ0hJatKdoKuXPjguKImGiHk3cXxrlShazGs7MjcdLQmpz2xQwGc2HpTWyyNa5zEgc5Sh2biAN5LeQMsXgImFnK1q/nRuDhpYR95ct58MUjAaYVU4W9rUg+m5kCA3B24438S63M+270o2Lw/L+NphivshPBcsz9m9JpXyl+VYzVhnEdgYC4CeCo/Ni7AdVLXnVYUIU='
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
-    generate-ddl: true
+    generate-ddl: false
   sql:
     init:
       mode: never
