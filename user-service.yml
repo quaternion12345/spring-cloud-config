@@ -1,19 +1,22 @@
 spring:
+  application:
+    name: user-service
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password: '{cipher}AQBNTh9yT/21YwzSxZaeiFh/VeqDODhwXt0cUY/E5ZYg9xUP8W1Y7T51Sh8JJS4WGuxSxdCRTc9eO4YkhsJqMFGcox92YwM+CA2XGOD4HSPSmrob+Ov11h67as9JCk7D8qV+MZeOZsJvq/KWHtb3n0B/W4Mv6ep3c2+za7yNQ9D3BOBudwYdOtpwrOutSsWVYIHuiy03Q0/oE6IyUQK/JA8eoCKSojrcLCpXojLRZdaBYneamS5TiukfB5AhZUGubeX956kCACvSsPqALElagOTrf8xLEY6w2xTRcHT6x981pBgfPQ33fPTktby9rNK0dEKwVA/3XW2iISOhE9nIRCjRS0ibrMT8x1gfxZVtJoClmNAVg6SCFyMZ+ScrYV9hyJ4='
-    
-token:
-  expiration_time: 86400000 # 24 * 60 * 60 * 1000
-  secret: '{cipher}AQAR/oZjRBWg9V91F1gpquMJmV63gPgRdHVllgwa5CrNcYuqNAxXbyq2kST+C8VS9q8iLsffzxVLNkfJVTvKPiiGueA6mzlkvLxwwj/sxFJC0zhPf1qj/KsIivhIpK8ofV1I07S3lV+kL1lUihIX+Ck2TOEyuycnWxmFboN9KDYCWjyybDFU5AJSWFlm6Va79MIRY89hU80pp5SLnTL+6Jb2+Qc7rNaGtywBIGX76ZYE/0TgAsAp9xzVWiS0myYRDvydnSi7ybwRt3TeKcV9cpReG51/HHGaeWji0p+RHkq+p8J0Fhw8CiP5EzwFTkq1HgszhMn6zgs3KDsCrdq5awyZNfr+b2bby5RP60nyKDkcofIpcHsqTzxhTXhaOr9BSERNOsZsgrzSRXOp1TKeMZqv'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-users:3306/mydb?serverTimezone=Asia/Seoul&useSSL=false
+    username: root
+    password: '{cipher}AQASZH9WLuOSBIZgG6NWBm3UkxmkAGWcOClbPUAChU7EGeKE95/MJul77G4SkOPOA5tRAFxdbDFAJ9n2p/vJS6Iek2XMIzZXF7GMr8w+7K9rBN/oJNY9zDRODXGzMQUZWAu6lWbYA3l26NUAr6soMN+J0OXjI6N+wQWG+pHWaydGn7BtAboceKHlSB5cKXnEYmZUMj76KK54UpfOa8jjPlOP2SESAy9hojbv/QjTopgs1T8SChrHsitp9jeAAcLoqCa/uqofsdqjecm04ttNntxF3FLQpE8o1UdumtgcGXMpuPD139deypRGCIZB7ndShzO8ByNNUaTS0AoVxxSo4ZVsg+gU+DSB1mXvRutxIwc21hPJrZUaKymEhPS4iCiPtFU='
+  data:
+    mongodb:
+      # host: localhost
+      port: 27017
+      authentication-database: admin
+      username: user_user
+      password: '{cipher}AQA/6KJM/P5A9i//AILDDC4KdkJo8Ooz6XzUKECSXrfwTZloqf2GoXe1I4dKUU+bOXLbQ+NIjZMSFpR8rp1/4iX1HF+4R302JRQyn/CCWxxXprlvME9GAgkmpPICqp9uNdfCDaVsjNKk4isBZH2cIqzyGZlhFaPl+pvh1Gp2G2szfMi/apJLmc2wGX1s9Sb6T3wouQWltkSrZlAkHWEtUYFxeihSuTJwaMyp2hnAnPek4nLl9XhXjMgGCiX29rRc+MLlFQf7kb/NwoHm/s5k62Ghf8qM394vIwN50ymEjSK9FRmN0dBMme9ynIvT4WVF9Rc8VP85D3BDrDqXzivk4TUuAj+XCkU+Hd6MGP60nWxDJQJbMf4ij2eEtMvbTNRbX6A='
+      database: mydb
 
-
-gateway:
-  ip: 172.18.0.3
-
-order_service:
-  url: http://ORDER-SERVICE/order-service/%s/orders
-  exception:
-    orders_is_empty: There is no item.
+logging:
+  level:
+    com.example.userservice.client: DEBUG
+  # pattern:
+  #   level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
