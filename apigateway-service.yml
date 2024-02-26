@@ -87,4 +87,4 @@ management:
 
 logging:
   level:
-    root: DEBUG
+    com.example.apigatewayservice: DEBUG
