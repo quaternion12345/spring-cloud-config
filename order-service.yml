@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: order-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-orders:3306/mydb?serverTimezone=Asia/Seoul&useSSL=false
+    username: root
+    password: '{cipher}AQAwcff7WFUpqioDdt/3nBV4P12Gdg+WNq6HBRlyWGKlIbWBQWk3NESKoOXzVHcAveitRMwm21aBT1ksJQ7iIWWupUREhMALkmiFb3K7eulWpOg8kMTn1UNcdQi5egXMo61GwiyBxYmwOAXQolYMFvxntwFdYK2oglTutAx92ONfOLVSUtkqUcu0fTWcH2rDb3q6blWVsxT6BleGLLINLgNApPS4fh31pc7XLCxG7pvuKM2JxsO8F9W0pIw0kGyxNsXUakBKQk5zD1IN/duqr1UJJZLXOUcgaE4bzVjjSdSx9j/UwUBxLZwHdrhTcMtnXUX12depd99mzH8Wcqe276KkLLz+4XsffY3K17I5dXItV0qIcLoFsbRDwqHIfzQ2klU='
+  data:
+    mongodb:
+      # host: localhost
+      port: 27017
+      authentication-database: admin
+      username: order_user
+      password: '{cipher}AQAODLvls+mMET+yHcgV/11ZufQXKopWaXb7t+1nB5AltA/0dFhpQGEtt6NoprCBfEl8y2vZT5+QvdPMzRTASgglWjhIYjuHXsn/TgofH0FwIgTk7aDxpxpkAAQOJv+Fc3YV9tnlPvpBU2P2WcO6tO0LUf5bdAyc+6wTtwNKVW6NfrP0DjwCRzD3d5mOSdagvm/v/9Ex3WaSybX7AKyLu5g3ez58SIm9gh2slia+WNqPY1pSYOMNmwyqqRHRJLsoQizUoHvFNK2Nyz/ehrpy6AOvd/2uMKNvOZq3GDcVyBn0wjIucJ3upcvHQXff2xEcAsmBQWnqUUsR0o58EE3iQ2IbzryiATUm4llanNLUb1QmwpErEcooaHtVwHLHUlRh5XY='
+      database: mydb
+
+logging:
+  level:
+    com.example.orderservice.client: DEBUG
+  # pattern:
+  #   level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
