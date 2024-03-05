@@ -51,10 +51,3 @@ gateway:
 token:
   expiration_time: 86400000 # 24 * 60 * 60 * 1000
   secret: '{cipher}AQAAjiltTERDbH7x6SplJatBrhG5snV6UGMjUlRyLpS24j5AzYSxRgQ8zr3wPdR2vvt8sC8dDseknZ09sdWsqgBXuc9mnzqzu8h9N7os5MIh7S/PrH9dFwH7TviAp/0dX5wKJmhKUarSXe50RHxJSOijbVtfNW3Sq7viJl1j5WrxdCUUd4Sg4iziDCGH5tOUohU0T++0bog61C/0tEA5nxMU36N8LhVrgmEAW+9LImLQiASk8KpXDHyyUn+j9Cy0fPFhH7G+UlqpXEHYmcPHrKdFCDR18l0ZFU93jxIaEEmi296SZSm+UseOzvGXvZiWJvCM3gVo0JfpyioqoCoS5s+1gSQZqoGrIv8T90Zf3Et1/cc7DAmnPBEoGvACGUL2wC21A8xU8Y3xDIj2LmvxDC2y'
-
-kafka:
-  url: kafka:9092
-
-schema:
-  registry:
-    url: schema-registry:8081

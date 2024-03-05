@@ -14,6 +14,16 @@ spring:
       username: user_user
       password: '{cipher}AQA/6KJM/P5A9i//AILDDC4KdkJo8Ooz6XzUKECSXrfwTZloqf2GoXe1I4dKUU+bOXLbQ+NIjZMSFpR8rp1/4iX1HF+4R302JRQyn/CCWxxXprlvME9GAgkmpPICqp9uNdfCDaVsjNKk4isBZH2cIqzyGZlhFaPl+pvh1Gp2G2szfMi/apJLmc2wGX1s9Sb6T3wouQWltkSrZlAkHWEtUYFxeihSuTJwaMyp2hnAnPek4nLl9XhXjMgGCiX29rRc+MLlFQf7kb/NwoHm/s5k62Ghf8qM394vIwN50ymEjSK9FRmN0dBMme9ynIvT4WVF9Rc8VP85D3BDrDqXzivk4TUuAj+XCkU+Hd6MGP60nWxDJQJbMf4ij2eEtMvbTNRbX6A='
       database: mydb
+  kafka:
+    consumer:
+      bootstrap-servers: kafka:9092
+      group-id: group-user
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: kafka:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 logging:
   level:
