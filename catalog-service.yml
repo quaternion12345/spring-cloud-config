@@ -17,6 +17,16 @@ spring:
   sql:
     init:
       mode: never
+  kafka:
+    consumer:
+      bootstrap-servers: kafka:9092
+      group-id: group-catalog
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: kafka:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 logging:
   level:
